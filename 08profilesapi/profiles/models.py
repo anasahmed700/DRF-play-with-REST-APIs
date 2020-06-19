@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User  # User model is incharge of only authentication related tasks
 from django.db import models
 
 
