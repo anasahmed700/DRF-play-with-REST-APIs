@@ -10,11 +10,12 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = '__all__'
 
-class ProfileAvatarSerializer(serializers.ModelSerializer):
 
+class ProfileAvatarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ("avatar",)
+
 
 class ProfileStatusSerializer(serializers.ModelSerializer):
     user_profile = serializers.StringRelatedField(read_only=True)

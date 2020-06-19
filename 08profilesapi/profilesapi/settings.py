@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',  # added authtoken app
+    'rest_auth',
     'profiles',
 ]
 
@@ -124,3 +126,11 @@ STATIC_URL = '/static/'
 # media files configuration
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'uploads'
+
+# adding authentication class
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
