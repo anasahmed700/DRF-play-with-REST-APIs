@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Rendering</title>
+    
+</head>
+<body>
+    <div id="app">
+        <h3>Methods calls each time with new random number.</h3>
+        <p>Method 1: {{ getRandomNumber() }}</p>
+        <p>Method 2: {{ getRandomNumber() }}</p>
+        <p>Method 3: {{ getRandomNumber() }}</p>
+        <hr>
+        <h3>Computed property generates random number once and stores it in cache.</h3>
+        <p>Computed 1: {{ getRandomComputed }}</p>
+        <p>Computed 2: {{ getRandomComputed }}</p>
+        <p>Computed 3: {{ getRandomComputed }}</p>
+        <hr>
+        <p>Full Name: {{ fullname }}</p>
+        <p>Reverse Full Name: {{ reverseFullname }}</p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Methods</title>
+    <style>
+        .box{
+            background-color: burlywood;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ lesson }}</h1>
+        <h2>{{ counter }}</h2>
+        <button v-on:click="incrementCounter">increment</button><br>
+        <p>Open the console and count the mouseovers to the box.</p>
+        <div class="box" @mouseover="overTheBox"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

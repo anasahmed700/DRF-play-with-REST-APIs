@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Forms & User Input</title>
+    <style>
+        .circle{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="row justify-content-center mt-3">
+            <div class="circle" v-bind:style="{backgroundColor: color}"></div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <input type="text" v-model="color" placeholder="Enter color name">
+        </div>
+        <div class="row justify-content-center mt-3">
+            <p>Color: {{color}}</p>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-5">
+                <p>write a message</p>
+                <textarea class="form-control"
+                v-model="text"
+                placeholder="write something here..."
+                cols="30"
+                rows="5"></textarea>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-5">
+                <p>Message: {{text}}</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+                <input type="checkbox" id="checkbox" v-model="checked">
+                <label for="checkbox">&nbsp;&nbsp;Checked: {{checked}}</label>
+        </div>
+        <div class="row justify-content-center mt-3">
+                <select v-model="city">
+                    <option>Karachi</option>
+                    <option>Lahore</option>
+                    <option>Islamabad</option>
+                    <option>Quetta</option>
+                </select>
+                <span>&nbsp;&nbsp;City: {{city}}</span>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <form>
+                <div class="form-group">
+                    <label for="commentText">Publish your comments</label><br>
+                    <textarea id="commentText" cols="80" rows="10" v-model="comment">
+
+                    </textarea>
+                </div>
+                <button class="btn btn-sm btn-primary" type="submit">Publish</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
